@@ -2,30 +2,24 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
-    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@app/*": [
-        "./src/app/*"
-      ],
-      "@pages/*": [
-        "./src/pages/*"
-      ],
-      "@widgets/*": [
-        "./src/widgets/*"
-      ],
-      "@features/*": [
-        "./src/features/*"
-      ],
-      "@shared/*": [
-        "./src/shared/*"
-      ]
+      "@/*": ["./*"],
+      "@app/*": ["./app/*"],
+      "@pages/*": ["./pages/*"],
+      "@widgets/*": ["./widgets/*"],
+      "@features/*": ["./features/*"],
+      "@shared/*": ["./shared/*"],
+      "*": ["./*"]
     }
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx"
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js",
+    "android",
+    "ios",
+    "docs"
   ]
 }

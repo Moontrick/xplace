@@ -1,7 +1,10 @@
-import { HomeContent } from "../../features/HomeControl/components/HomeContent";
+import { Layout } from 'widgets/Layout';
+import { HomeContent } from '../../features/HomeControl/components/HomeContent';
 
 export default function HomePage() {
   return (
-    <HomeContent />
+    <Layout>
+      <HomeContent />
+    </Layout>
   );
 }
