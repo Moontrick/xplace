@@ -4,13 +4,12 @@ export const layoutStyles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
     position: 'relative',
   },
   box: {
     position: 'absolute',
-    top: `${7}%`,
-    left: 10,
+    top: `${10}%`,
+    left: `${3}%`,
+    zIndex: 10,
   },
 });

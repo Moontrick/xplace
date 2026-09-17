@@ -1,9 +1,11 @@
 import type { ReactNode } from 'react';
 import { ScrollView } from 'react-native';
+import { router } from 'expo-router';
 import { Text, XStack, YStack } from 'tamagui';
 import { Button, type ButtonColor, type ButtonSize, type ButtonVariant } from 'shared/ui/Button';
 import { IconButton } from 'shared/ui/IconButton';
 import { IconUser } from 'public/assets/icons/IconUser';
+import { IconArrowLeft } from 'public/assets/icons/IconArrowLeft';
 
 const variants: ButtonVariant[] = ['primary', 'secondary', 'outline', 'ghost'];
 const colors: ButtonColor[] = ['accent', 'yellow', 'green', 'pink', 'negative'];
@@ -25,6 +27,15 @@ export default function UiKitPage() {
     <ScrollView
       contentContainerStyle={{ padding: 16, paddingTop: 64, gap: 32, backgroundColor: '#FAF8F2' }}
     >
+      <XStack>
+        <IconButton
+          icon={<IconArrowLeft />}
+          variant="ghost"
+          onPress={() => router.back()}
+          accessibilityLabel="Назад"
+        />
+      </XStack>
+
       {variants.map((variant) => (
         <Section key={variant} title={`variant: ${variant}`}>
           <XStack gap={8} flexWrap="wrap">

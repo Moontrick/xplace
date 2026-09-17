@@ -4636,9 +4636,17 @@ expo-keep-awake@~57.0.2:
   resolved "https://registry.yarnpkg.com/expo-keep-awake/-/expo-keep-awake-57.0.2.tgz#ce266252ad478523bb3431d40f67bd643f86bd9c"
   integrity sha512-GqgH746wtJImmsbyHmCQoi7cOslKuWQBbJHXr53S35Bpf5UvxCAztvnitUEd7D0QvFN2rvkOhylbZpgZZfBLlQ==
 
-expo-location@~57.0.18:
+expo-linking@~57.0.10:
+  version "57.0.10"
+  resolved "https://registry.npmjs.org/expo-linking/-/expo-linking-57.0.10.tgz#e5408feaf4baaf09833fd3ff6be206f49df518b4"
+  integrity sha512-RzRi4l4pIYzjgoCJKnqkO+lUI+M2YX6qgcMIQkIbLAXdcWrykBoKYwHGlmAkdFHQm89GaYcq329yfxG+c1hv8w==
+  dependencies:
+    expo-constants "~57.0.18"
+    invariant "^2.2.4"
+
+expo-location@^57.0.18:
   version "57.0.18"
-  resolved "https://registry.yarnpkg.com/expo-location/-/expo-location-57.0.18.tgz#f45dc53b26ad458f42fc03eef611303c7a3c3f95"
+  resolved "https://registry.npmjs.org/expo-location/-/expo-location-57.0.18.tgz#f45dc53b26ad458f42fc03eef611303c7a3c3f95"
   integrity sha512-NRrXdNJjAbxtjVrXrWPpYSH0pefp9edwluU7Xy2bZrETP0+Wy8UuzgVEjWqo/8tLsF8Cgm503eE8gS+V2S31+Q==
   dependencies:
     "@expo/image-utils" "^0.11.5"

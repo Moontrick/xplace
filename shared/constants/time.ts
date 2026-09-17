@@ -1,0 +1,3 @@
+export const DELAY_POSITION_TIME = 10000;
+
+export const DELAY_POSITION_MOVE_TIME = 10000;
