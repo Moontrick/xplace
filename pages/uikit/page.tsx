@@ -6,6 +6,32 @@ import { Button, type ButtonColor, type ButtonSize, type ButtonVariant } from 's
 import { IconButton } from 'shared/ui/IconButton';
 import { IconUser } from 'public/assets/icons/IconUser';
 import { IconArrowLeft } from 'public/assets/icons/IconArrowLeft';
+import { IconSearch } from 'public/assets/icons/IconSearch';
+import { IconSliders } from 'public/assets/icons/IconSliders';
+import { IconPlus } from 'public/assets/icons/IconPlus';
+import { IconMapPin } from 'public/assets/icons/IconMapPin';
+import { IconPushPin } from 'public/assets/icons/IconPushPin';
+import { IconStarOff } from 'public/assets/icons/IconStarOff';
+import { IconUsers } from 'public/assets/icons/IconUsers';
+import { IconUserPlus } from 'public/assets/icons/IconUserPlus';
+import { IconChevronRight } from 'public/assets/icons/IconChevronRight';
+import { IconSettings } from 'public/assets/icons/IconSettings';
+import { palette } from 'shared/styles/palette';
+
+const icons = [
+  ['IconUser', IconUser],
+  ['IconArrowLeft', IconArrowLeft],
+  ['IconSearch', IconSearch],
+  ['IconSliders', IconSliders],
+  ['IconPlus', IconPlus],
+  ['IconMapPin', IconMapPin],
+  ['IconPushPin', IconPushPin],
+  ['IconStarOff', IconStarOff],
+  ['IconUsers', IconUsers],
+  ['IconUserPlus', IconUserPlus],
+  ['IconChevronRight', IconChevronRight],
+  ['IconSettings', IconSettings],
+] as const;
 
 const variants: ButtonVariant[] = ['primary', 'secondary', 'outline', 'ghost'];
 const colors: ButtonColor[] = ['accent', 'yellow', 'green', 'pink', 'negative'];
@@ -123,6 +149,19 @@ export default function UiKitPage() {
           ))}
           <IconButton disabled icon={<IconUser />} accessibilityLabel="disabled" />
           <IconButton loading icon={<IconUser />} accessibilityLabel="loading" />
+        </XStack>
+      </Section>
+
+      <Section title="icon set">
+        <XStack gap={16} flexWrap="wrap">
+          {icons.map(([name, Icon]) => (
+            <YStack key={name} items="center" gap={4} width={96}>
+              <Icon fill={palette.content} width={24} height={24} />
+              <Text fontSize={10} color="$contentSecondary">
+                {name}
+              </Text>
+            </YStack>
+          ))}
         </XStack>
       </Section>
     </ScrollView>

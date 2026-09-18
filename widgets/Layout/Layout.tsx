@@ -5,10 +5,11 @@ import { IconButton } from 'shared/ui/IconButton';
 import { IconUser } from 'public/assets/icons/IconUser';
 import { layoutStyles } from './styles';
 import { LayoutProps } from './types';
+import { IconSettings } from '@/public/assets/icons/IconSettings';
 
 export function Layout({ children }: LayoutProps) {
-  const handlePress = () => {
-    router.push('/profile');
+  const handlePress = (pathName: string) => {
+    router.push(pathName);
   };
 
   const handleLongPress = () => {
@@ -20,9 +21,16 @@ export function Layout({ children }: LayoutProps) {
       <View style={layoutStyles.box}>
         <IconButton
           icon={<IconUser />}
-          onPress={handlePress}
+          onPress={() => handlePress('/profile')}
           onLongPress={handleLongPress}
           accessibilityLabel="Профиль"
+        />
+        <IconButton
+          icon={<IconSettings />}
+          variant="primary"
+          onPress={() => handlePress('/uikit')}
+          onLongPress={handleLongPress}
+          accessibilityLabel="UI Kit"
         />
       </View>
       {children}

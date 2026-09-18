@@ -8,8 +8,11 @@ export const layoutStyles = StyleSheet.create({
   },
   box: {
     position: 'absolute',
-    top: `${10}%`,
-    left: `${3}%`,
+    top: `${7.9}%`,
+    left: `${3.3}%`,
     zIndex: 10,
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 12,
   },
 });
